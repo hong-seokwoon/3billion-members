@@ -3,7 +3,7 @@ function doGet(e) {
   
   var members = [];
   if (action == "lunch" ) {
-    var sheet = SpreadsheetApp.openById("1pa8pOP2DYbF2BxXeO9V3oceL1fXP3Yxp43cAUD_ZObE").getSheetByName("slack")
+    var sheet = SpreadsheetApp.openById([SHEET_ID]).getSheetByName([SHEET_NAME])
       , range = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn())
       , data = range.getValues();
   } 
